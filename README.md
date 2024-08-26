@@ -18,6 +18,8 @@ https://github.com/01-edu/public/tree/master/subjects/graphql/audit
 
 On index.html make right click and open with live server.
 
+Or open online https://rlauga.github.io/graphql
+
 
 
 ## Special thanks: 
