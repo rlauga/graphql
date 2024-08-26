@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Graphql KOOD|JÕHVI</title>
+    <script src="js/authentication.js" defer></script>
+    <script src="js/login.js"></script>
+    <script src="js/query.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/xpChart.js"></script>
+    <script src="js/fetchQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/skillChart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!--LOGIN FORM-->
+    <form id="login">
+        <div class="loginPage">
+            <h3 class="titleLogin">Login with <span class="koodColor">kood</span><span class="johviColor">/jõhvi
+                </span>credentials</h3>
+            <input class="usernameOrEmail" placeholder="Username or Email" required>
+            <input class="password" type="password" placeholder="Password" required>
+            <button class="login" type="submit">Login</button>
+            <div class="errorMsg"></div>
+        </div>
+    </form>
+
+    <div class="mainPage">
+        <div class="navBar">
+            <button id="navBarWelcomeName"></button>
+            <button class="logOutBtn" onclick="logOut()" type="button">LOGOUT</button>
+        </div>
+        <div class="displayQueryData">
+            <div class="dataToDisplay" id="userData"></div>
+            <div class="dataToDisplay" id="xpAndLevel"></div>
+            <div class="dataToDisplay" id="auditRatio">auditRatio</div>
+            <div class="dataToDisplay" id="userXp"></div>
+
+            <div class="dataToDisplay" id="topSkills">
+                <h2 class="chart-heading">Top skills</h2>
+                <svg id="pieChart" width="310" height="500"></svg>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

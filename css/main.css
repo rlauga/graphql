@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Denk+One&display=swap");
+
+body {
+  background: linear-gradient(83deg,
+      rgba(102, 102, 102, 1) 0%,
+      rgba(152, 157, 103, 1) 48%,
+      rgba(38, 38, 38, 1) 100%);
+  color: rgb(220, 220, 220);
+  font-family: "Denk One", sans-serif;
+  border-radius: 4px;
+}
+
+button,
+input {
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  font-family: "Denk One", sans-serif;
+}
+
+input::placeholder {
+  color: #000;
+}
+
+input:focus {
+  color: rgb(179, 216, 30);
+  background-color: rgba(40, 40, 40, 0.454);
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(179, 216, 30);
+  color: #333;
+  font-weight: bold;
+}
+
+.titleLogin {
+  font-size: 20px;
+}
+
+.johviColor {
+  font-weight: bold;
+  color: rgb(3, 3, 3);
+  text-transform: uppercase;
+}
+
+.koodColor {
+  font-weight: bold;
+  color: rgb(179, 216, 30);
+  text-transform: uppercase;
+}
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #555931;
+  border: 2px solid #f3f3f3;
+  border-radius: 18px;
+  padding: 25px;
+  height: 250px;
+  width: 300px;
+}
+
+.loginPage button,
+.loginPage input {
+  margin-top: 25px;
+}
+
+.errorMsg {
+  color: #d8e845;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.mainPage {
+  display: none;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+#navBarWelcomeName {
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  border: 2px solid #d5e91e;
+  /*margin: 0 0 0 40%;*/
+}
+
+.logOutBtn {
+  margin-left: auto;
+  font-size: 16px;
+  width: 10%;
+  border: 2px solid #d5e91e;
+}
+
+.displayQueryData {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 18% 2fr;
+  height: 90vh;
+  gap: 10px;
+  margin: 10px;
+}
+
+.dataToDisplay {
+  border: 1px solid #d5e91e;
+  background-color: #0000007a;
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  justify-items: center;
+}
+
+#userData {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#totalXpAmount {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#userXp {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  justify-content: flex-start;
+}
+
+#xpAndLevel {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+}
+
+.boxDataCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-bottom: 5px solid #d8e845;
+  border-radius: 14px;
+  padding-bottom: 5px;
+}
+
+.label {
+  font-size: 38px;
+  color: #d5e91e;
+  flex-direction: row;
+}
+
+.value {
+  font-size: 26px;
+}
+
+/*#b {
+  grid-row: 1;
+  grid-column: 3;
+}*/
+
+.auditDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.auditTitle {
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-right: 110px;
+}
+
+.auditRatio {
+  font-size: 15px;
+  border: 3px solid #d5e91e;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.barContainer {
+  width: 300px;
+  display: flex;
+  margin: 5px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ffd900;
+  background-color: orange;
+}
+
+.bar {
+  height: 20px;
+  line-height: 20px;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.barUp {
+  background: #b3d81e;
+  border-radius: 250px;
+}
+
+.barDown {
+  background: orange;
+}
+
+.auditLastRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.upCls {
+  color: #b3d81e;
+}
+
+.downCls {
+  color: orange;
+}
+
+@media (max-width: 2560px) {
+  .loginPage {
+    width: 80%;
+    max-width: 350px;
+    padding: 20px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+
+  .displayQueryData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  #userData {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  #xpAndLevel {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    flex-wrap: wrap;
+  }
+
+  #auditRatio {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  #userXp {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+
+  #topSkills {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dataToDisplay {
+    border: 1px solid #d5e91e;
+    background-color: #0000007a;
+    padding: 10px;
+    /* Added more padding for better content separation */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    justify-items: center;
+  }
+
+  .boxDataCenter {
+    margin-bottom: 10px;
+    /* Stack elements vertically */
+    border-bottom: 5px solid #d8e845;
+    /* Border at the bottom */
+    border-radius: 14px;
+    padding-bottom: 5px;
+  }
+
+  .label {
+    font-size: 24px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .barContainer {
+    width: 100%;
+    /* Full width for better utilization of space */
+  }
+
+  .auditTitle {
+    font-size: 18px;
+    /* Adjusted font size */
+    margin-right: 10px;
+    /* Reduced margin-right for better alignment */
+  }
+
+  .auditRatio {
+    padding: 4px;
+    /* Adjusted padding */
+    font-size: 10px;
+    /* Adjusted font size */
+  }
+
+  .logOutBtn {
+    width: auto;
+    /* Auto width to fit content */
+    font-size: 14px;
+    /* Adjusted font size */
+    padding: 8px;
+    /* Added padding for better button appearance */
+  }
+
+  #navBarWelcomeName {
+    width: 70%;
+    position: initial;
+    transform: initial;
+  }
+}
